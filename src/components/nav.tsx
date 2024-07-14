@@ -28,7 +28,7 @@ export default function Nav() {
   const checkActivePath = useActivePath()
 
   return (
-    <nav className="flex justify-end text-md p-12 max-sm:p-8 max-w-screen-lg w-full mx-auto">
+    <nav className="flex justify-end text-md p-8 md:p-12 max-w-screen-lg w-full mx-auto">
       <ul className="flex flex-row items-center underline-offset-4 *:ml-3 max-sm:*:ml-2">
         {navigation.map(({ href, name }) => (
           <li key={href}>
