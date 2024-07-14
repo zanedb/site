@@ -1,9 +1,38 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Nav from '@/components/nav'
 
-const inter = Inter({ subsets: ['latin'] })
+const haffer = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Haffer-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Haffer-RegularItalic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/Haffer-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Haffer-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Haffer-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-haffer',
+})
 
 export const metadata: Metadata = {
   title: '@zanedb',
@@ -17,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${haffer.variable} font-sans`}>
         <Nav />
         {children}
       </body>
