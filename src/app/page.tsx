@@ -12,10 +12,12 @@ export default async function Home() {
           width={2260}
           height={3014}
           className="rounded-lg max-w-full"
+          priority={true}
+          alt="Me at the palace"
         />
         <div className="">
           <h1 className="text-6xl max-sm:text-5xl font-bold">Hi, I’m Zane.</h1>
-          <p className="text-2xl max-sm:text-xl pt-4">
+          <p className="text-xl md:text-2xl pt-4">
             I’m a {age}-year-old web designer and musician, studying multimedia
             arts.
           </p>
