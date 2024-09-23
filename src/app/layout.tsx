@@ -1,12 +1,25 @@
 import type { Metadata } from 'next'
 import Banner from '@/components/banner'
 import { trioGrotesk } from '@/lib/fonts'
+import { baseUrl } from './sitemap'
 import './globals.css'
 // import Nav from '@/components/nav'
 
 export const metadata: Metadata = {
-  title: '@zanedb',
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: '@zanedb',
+    template: '%s — @zanedb',
+  },
   description: 'Zane is a web designer & friend based in San Francisco.',
+  openGraph: {
+    title: '@zanedb',
+    description: 'Zane is a web designer & friend based in San Francisco.',
+    url: baseUrl,
+    siteName: '@zanedb',
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
