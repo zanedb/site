@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Banner from '@/components/banner'
 import { trioGrotesk } from '@/lib/fonts'
 import './globals.css'
 // import Nav from '@/components/nav'
@@ -15,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <Nav />
-      <body className={`${trioGrotesk.variable} font-sans bg-gray-50`}>
+      <body className={`${trioGrotesk.variable} font-sans`}>
+        <Banner />
+        {/*<Nav />*/}
         {children}
       </body>
     </html>
