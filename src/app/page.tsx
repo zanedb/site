@@ -1,6 +1,7 @@
 import Section from '@/components/section'
 import Image from 'next/image'
 import { haffer } from '@/lib/fonts'
+import { getAge } from '@/lib/util'
 
 export default async function Home() {
   const age = await getAge()
@@ -84,16 +85,4 @@ export default async function Home() {
       <Projects />*/}
     </main>
   )
-}
-
-async function getAge() {
-  const res = await fetch('https://api.zanedb.com/api/age')
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
-
-  const json = await res.json()
-  return json.age
 }
