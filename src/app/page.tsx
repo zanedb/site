@@ -6,7 +6,7 @@ export default async function Home() {
   const me = await res.json()
 
   return (
-    <main className="p-8 md:p-12 max-w-screen-md w-full mx-auto">
+    <>
       <section className="flex justify-between items-center">
         <div className="text-2xl md:text-3xl">
           <h1>Hey, I’m</h1>
@@ -35,6 +35,6 @@ export default async function Home() {
       <section className="mt-6">
         <h3 className="text-lg font-bold">Past Work</h3>
       </section>
-    </main>
+    </>
   )
 }

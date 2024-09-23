@@ -16,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${trioGrotesk.variable} font-sans`}>
+      <body className={`${trioGrotesk.variable} font-sans antialiased`}>
         <Banner />
         {/*<Nav />*/}
-        {children}
+        <main className="p-8 md:p-12 max-w-screen-md w-full mx-auto">
+          {children}
+        </main>
       </body>
     </html>
   )
