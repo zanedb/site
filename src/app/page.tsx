@@ -1,5 +1,6 @@
 import Section from '@/components/section'
 import Image from 'next/image'
+import { haffer } from '@/lib/fonts'
 
 export default async function Home() {
   const age = await getAge()
