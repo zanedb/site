@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Typist from '@/components/typist'
-import { getAge } from '@/lib/util'
 
 export default async function Home() {
-  const age = await getAge()
+  const res = await fetch('https://api.zanedb.com/api/me')
+  const me = await res.json()
 
   return (
     <main className="p-8 md:p-12 max-w-screen-md w-full mx-auto">
@@ -28,7 +28,7 @@ export default async function Home() {
       </section>
       <section className="mt-6 pt-4 border-t-2">
         <p className="break-words">
-          I’m a {age}-year-old web designer and musician, studying multimedia
+          I’m a {me.age}-year-old web designer and musician, studying multimedia
           arts at San Francisco State University.
         </p>
       </section>
