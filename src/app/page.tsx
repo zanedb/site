@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Typist from '@/components/typist'
+import Projects from '@/components/projects'
 
 export default async function Home() {
   const res = await fetch('https://api.zanedb.com/api/me')
@@ -34,6 +35,7 @@ export default async function Home() {
       </section>
       <section className="mt-6">
         <h3 className="text-lg font-bold">Past Work</h3>
+        <Projects />
       </section>
     </>
   )

@@ -1,24 +1,37 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { getProjects } from '@/app/portfolio/utils'
+
 export default function Projects() {
+  const projects = getProjects()
+
   return (
-    <section className="mt-10">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3>Project 1</h3>
-          <p>Project description</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3>Project 2</h3>
-          <p>Project description</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3>Project 3</h3>
-          <p>Project description</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3>Project 4</h3>
-          <p>Project description</p>
-        </div>
-      </div>
+    <section className="my-2">
+      {projects
+        .sort((a, b) => {
+          if (a.metadata.order < b.metadata.order) {
+            return -1
+          }
+          return 1
+        })
+        .map((project) => (
+          <Link
+            key={project.slug}
+            href={`/portfolio/${project.slug}`}
+            className="flex gap-4 md:gap-16 bg-neutral-100 transition-shadow rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            style={{
+              // @ts-expect-error custom properties
+              '--accent-color': project.metadata.color,
+            }}
+          >
+            <div className="p-4">
+              <h3 className="font-medium pb-1">{project.metadata.title}</h3>
+              <p className="text-gray-700 text-sm">
+                {project.metadata.summary}
+              </p>
+            </div>
+          </Link>
+        ))}
     </section>
   )
 }
