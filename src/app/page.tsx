@@ -18,7 +18,6 @@ export default async function Home() {
           alt="Me at the palace"
         />
         <div className="">
-          <h1 className="text-6xl max-sm:text-5xl font-bold">Hi, I’m Zane.</h1>
           <p className="text-xl md:text-2xl pt-4">
             I’m a {age}-year-old web designer and musician, studying multimedia
             arts.
@@ -26,6 +25,10 @@ export default async function Home() {
           <p className="text-xl md:text-2xl pt-4">
             In the past, I’ve run hackathons, done other stuff, and yeah. This
             is going to be completely different text soon.
+          <h1>Hey, I’m</h1>
+          <h1 className="font-medium">
+            <Typist speed={180} />
+          </h1>
           </p>
         </div>
       </div>
