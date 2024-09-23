@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { trioGrotesk } from '@/lib/fonts'
 import './globals.css'
 // import Nav from '@/components/nav'
 
@@ -14,8 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${haffer.variable} font-sans`}>
         <Nav />
+      <body className={`${trioGrotesk.variable} font-sans bg-gray-50`}>
         {children}
       </body>
     </html>
