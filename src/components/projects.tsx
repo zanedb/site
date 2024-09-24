@@ -24,11 +24,22 @@ export default function Projects() {
               '--accent-color': project.metadata.color,
             }}
           >
-            <div className="p-4">
-              <h3 className="font-medium pb-1">{project.metadata.title}</h3>
-              <p className="text-gray-700 dark:text-gray-50 text-sm">
-                {project.metadata.summary}
-              </p>
+            <div className="p-4 flex justify-around">
+              <div>
+                <h3 className="font-medium pb-1">{project.metadata.title}</h3>
+                <p className="text-gray-700 dark:text-gray-50 text-sm">
+                  {project.metadata.summary}
+                </p>
+              </div>
+              {project.metadata.previewImage && (
+                <Image
+                  src={project.metadata.previewImage}
+                  alt={project.metadata.title}
+                  className="h-fit w-fit"
+                  width={64}
+                  height={64}
+                />
+              )}
             </div>
           </Link>
         ))}
