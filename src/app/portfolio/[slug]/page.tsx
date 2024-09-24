@@ -57,11 +57,13 @@ export default function Project({ params }: { params: { slug: string } }) {
         '--accent-color': project.metadata.color,
       }}
     >
-      <div className="flex flex-row">
-        <h1>{project.metadata.title}</h1>
+      <div className="mt-6 flex flex-col md:flex-row justify-between md:items-center">
+        <h1 className="text-2xl md:text-3xl font-bold">
+          {project.metadata.title}
+        </h1>
         {project.metadata.link ? (
           <Link
-            className={`flex items-center gap-2 rounded-full bg-[var(--accent-color)] px-4 py-2 text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
+            className={`rounded-full bg-[var(--accent-color)] mt-4 md:mt-0 px-4 py-2 text-sm text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
             href={project.metadata.link}
           >
             View site →

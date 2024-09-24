@@ -18,7 +18,7 @@ export default function Projects() {
           <Link
             key={project.slug}
             href={`/portfolio/${project.slug}`}
-            className="flex gap-4 md:gap-16 bg-neutral-100 transition-shadow rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            className="flex gap-4 mb-4 md:gap-16 bg-neutral-100 dark:bg-neutral-800 transition-shadow rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
             style={{
               // @ts-expect-error custom properties
               '--accent-color': project.metadata.color,
@@ -26,7 +26,7 @@ export default function Projects() {
           >
             <div className="p-4">
               <h3 className="font-medium pb-1">{project.metadata.title}</h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-gray-700 dark:text-gray-50 text-sm">
                 {project.metadata.summary}
               </p>
             </div>

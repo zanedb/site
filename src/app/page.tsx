@@ -14,15 +14,15 @@ export default async function Home() {
           <h1 className="font-medium">
             <Typist speed={180} />
           </h1>
-          <p className="mt-4 max-w-min rounded-full px-2 py-1 text-xs bg-[#d1f0ff] text-[#005dff]">
+          <p className="mt-4 max-w-min rounded-full px-2 py-1 text-xs bg-[#d6edff] dark:bg-[#83d1ff] text-[#0847c5]">
             he/him
           </p>
         </div>
         <Image
           src="https://github.com/zanedb.png"
-          width={136}
-          height={136}
-          className="rounded-full md:w-44 md:h-44 ease-in-out duration-300 hover:-translate-y-1 hover:shadow-sm hover:-skew-x-2 active:skew-x-2"
+          width={124}
+          height={124}
+          className="rounded-full border-4 md:w-40 md:h-40 ease-in-out duration-300 hover:-translate-y-1 hover:shadow-sm hover:-skew-x-2 active:skew-x-2"
           priority={true}
           alt="Me asf"
         />
