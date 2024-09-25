@@ -63,7 +63,7 @@ export default function Project({ params }: { params: { slug: string } }) {
           <Link
             className={`rounded-full bg-[var(--accent-color)] ${
               project.slug === 'jonatan' && 'text-neutral-800'
-            } mt-4 md:mt-0 px-4 py-2 text-sm text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
+            } w-fit mt-4 md:mt-0 px-4 py-2 text-sm text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
             href={project.metadata.link}
           >
             View site →
