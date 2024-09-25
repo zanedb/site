@@ -13,14 +13,12 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: any) {
-  let project = getProjects().find((project) => project.slug === params.slug)
-  // @ts-ignore
-  if (!project) return
+  let project =
+    getProjects().find((project) => project.slug === params.slug) ||
+    getProjects()[0]
 
   let { title, summary: description, image } = project.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  let ogImage = image ? image : `${baseUrl}/og?project=${project.slug}`
 
   return {
     title,
