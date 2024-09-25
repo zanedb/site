@@ -35,9 +35,9 @@ export default function Projects() {
                 <Image
                   src={project.metadata.previewImage}
                   alt={project.metadata.title}
-                  className="h-fit w-fit"
-                  width={64}
-                  height={64}
+                  className="h-fit w-fit max-w-16 max-h-16"
+                  width={128}
+                  height={128}
                 />
               )}
             </div>
