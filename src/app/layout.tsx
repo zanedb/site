@@ -19,6 +19,13 @@ export const metadata: Metadata = {
     siteName: '@zanedb',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://zanedb.com/og.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 }
 
