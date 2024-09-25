@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${trioGrotesk.variable} font-sans antialiased`}>
         <Banner />
         {/*<Nav />*/}
-        <main className="p-8 md:p-12 max-w-screen-md w-full mx-auto">
+        <main className="p-4 py-6 md:p-8 lg:p-12 max-w-screen-md w-full mx-auto">
           {children}
         </main>
       </body>

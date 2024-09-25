@@ -177,6 +177,12 @@ h6 {
 .prose img {
   /* Don't apply styles to next/image */
   @apply m-0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  transform: translateX(-0.75rem);
+  width: calc(100% + 1.5rem);
+  max-width: unset;
 }
 
 .prose p {
@@ -218,15 +224,6 @@ h6 {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
-}
-
-.prose img {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 0.75rem;
-  transform: translateX(-1rem);
-  width: calc(100% + 2rem);
-  max-width: unset;
 }
 
 pre::-webkit-scrollbar {
