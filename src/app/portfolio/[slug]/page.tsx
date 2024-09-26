@@ -19,6 +19,8 @@ export function generateMetadata({ params }: any) {
 
   let { title, summary: description, image } = project.metadata
   let ogImage = image ? image : `${baseUrl}/og?project=${project.slug}`
+  let { title, summary: description } = project.metadata
+  let ogImage = `${baseUrl}/og?project=${project.slug}`
 
   return {
     title,
