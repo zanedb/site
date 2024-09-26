@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ImageResponse } from 'next/og'
 import { getProjects } from '../portfolio/utils'
 
@@ -29,8 +30,9 @@ export async function GET(request: Request) {
           </p>
         </div>*/}
         {project.metadata.previewImage && (
-          <img
+          <Image
             src={`http://localhost:3000${project.metadata.previewImage}`}
+            alt="Project icon"
             tw="w-64 h-64 shadow-sm rounded-lg"
           />
         )}
