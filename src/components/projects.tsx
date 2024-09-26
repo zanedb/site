@@ -24,7 +24,7 @@ export default function Projects() {
               '--accent-color': project.metadata.color,
             }}
           >
-            <div className="p-4 flex justify-around">
+            <div className="p-4 flex justify-between w-full">
               <div>
                 <h3 className="font-medium pb-1">{project.metadata.title}</h3>
                 <p className="text-gray-700 dark:text-gray-50 text-sm">
