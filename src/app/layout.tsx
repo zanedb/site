@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import Banner from '@/components/banner'
 import Footer from '@/components/footer'
 import { trioGrotesk } from '@/lib/fonts'
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </main>
+        <Analytics />
       </body>
     </html>
   )
