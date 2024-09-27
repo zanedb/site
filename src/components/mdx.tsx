@@ -4,7 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
 
-function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
+function Table({ data }) {
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ))
@@ -26,7 +26,7 @@ function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   )
 }
 
-function CustomLink(props: any) {
+function CustomLink(props) {
   let href = props.href
 
   if (href.startsWith('/')) {
@@ -44,16 +44,16 @@ function CustomLink(props: any) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-function RoundedImage(props: any) {
+function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 
-function Code({ children, ...props }: any) {
+function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function slugify(str: string) {
+function slugify(str) {
   return str
     .toString()
     .toLowerCase()
@@ -64,8 +64,8 @@ function slugify(str: string) {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
 }
 
-function createHeading(level: number) {
-  const Heading = ({ children }: any) => {
+function createHeading(level) {
+  const Heading = ({ children }) => {
     let slug = slugify(children)
     return React.createElement(
       `h${level}`,
@@ -74,7 +74,7 @@ function createHeading(level: number) {
         React.createElement('a', {
           href: `#${slug}`,
           key: `link-${slug}`,
-          className: `anchor`,
+          className: 'anchor',
         }),
       ],
       children
@@ -99,7 +99,7 @@ let components = {
   Table,
 }
 
-export function CustomMDX(props: any) {
+export function CustomMDX(props) {
   return (
     <MDXRemote
       {...props}

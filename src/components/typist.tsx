@@ -28,7 +28,7 @@ export default function Typist({ speed = 20 }: { speed: number }) {
     }, speed)
 
     return () => clearInterval(interval)
-  }, [text, speed, index])
+  }, [text, speed, index, displayText])
 
   return displayText
 }

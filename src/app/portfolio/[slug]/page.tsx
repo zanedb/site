@@ -1,24 +1,23 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 import { CustomMDX } from '@/components/mdx'
 import { getProjects } from '@/app/portfolio/utils'
 import { baseUrl } from '@/app/sitemap'
 
 export async function generateStaticParams() {
-  let posts = getProjects()
+  let projects = getProjects()
 
-  return posts.map((post) => ({
-    slug: post.slug,
+  return projects.map((project) => ({
+    slug: project.slug,
   }))
 }
 
-export function generateMetadata({ params }: any) {
+export function generateMetadata({ params }) {
   let project =
     getProjects().find((project) => project.slug === params.slug) ||
     getProjects()[0]
 
-  let { title, summary: description, image } = project.metadata
-  let ogImage = image ? image : `${baseUrl}/og?project=${project.slug}`
   let { title, summary: description } = project.metadata
   let ogImage = `${baseUrl}/og?project=${project.slug}`
 
@@ -45,7 +44,7 @@ export function generateMetadata({ params }: any) {
   }
 }
 
-export default function Project({ params }: { params: { slug: string } }) {
+export default async function Project({ params }) {
   let project = getProjects().find((project) => project.slug === params.slug)
 
   if (!project) notFound()
