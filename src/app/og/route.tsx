@@ -1,8 +1,5 @@
-import Image from 'next/image'
 import { ImageResponse } from 'next/og'
 import { getProjects } from '../portfolio/utils'
-
-// export const runtime = 'edge'
 
 export async function GET(request: Request) {
   let url = new URL(request.url)
@@ -12,11 +9,6 @@ export async function GET(request: Request) {
   if (!project) {
     return new Response('Not found', { status: 404 })
   }
-
-  // const getFont = async (url: URL) => {
-  //   const res = await fetch(url)
-  //   return await res.arrayBuffer()
-  // }
 
   return new ImageResponse(
     (
@@ -30,8 +22,8 @@ export async function GET(request: Request) {
           </p>
         </div>*/}
         {project.metadata.previewImage && (
-          <Image
-            src={`http://localhost:3000${project.metadata.previewImage}`}
+          <img
+            src={`http://zanedb.com${project.metadata.previewImage}`}
             alt="Project icon"
             tw="w-64 h-64 shadow-sm rounded-lg"
           />
