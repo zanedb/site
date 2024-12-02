@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getProjects } from '@/app/portfolio/utils'
+import { noeText } from '@/lib/fonts'
 
 export default function Projects() {
   const projects = getProjects()
@@ -27,7 +28,9 @@ export default function Projects() {
             <div className="p-4 flex justify-between w-full">
               <div>
                 <h3 className="font-medium pb-1">{project.metadata.title}</h3>
-                <p className="text-gray-700 dark:text-gray-50 text-sm">
+                <p
+                  className={`text-gray-700 dark:text-gray-50 ${noeText.className}`}
+                >
                   {project.metadata.summary}
                 </p>
               </div>

@@ -1,5 +1,20 @@
 import localFont from 'next/font/local'
 
+export const noeText = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NoeText-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NoeText-Bold.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+})
+
 export const trioGrotesk = localFont({
   src: [
     {

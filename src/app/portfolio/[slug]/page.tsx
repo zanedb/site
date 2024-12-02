@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Metadata } from 'next'
 import { CustomMDX } from '@/components/mdx'
 import { getProjects } from '@/app/portfolio/utils'
 import { baseUrl } from '@/app/sitemap'
+import { noeText } from '@/lib/fonts'
 
 export async function generateStaticParams() {
   let projects = getProjects()
@@ -72,7 +72,7 @@ export default async function Project({ params }) {
         ) : null}
       </div>
       <div className="mb-8 mt-2 flex items-center justify-between text-sm"></div>
-      <article className="prose">
+      <article className={`prose ${noeText.className}`}>
         <CustomMDX source={project.content} />
       </article>
     </section>
