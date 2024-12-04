@@ -8,6 +8,11 @@ export const noeText = localFont({
       style: 'normal',
     },
     {
+      path: '../../public/fonts/NoeText-Italic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
       path: '../../public/fonts/NoeText-Bold.woff2',
       weight: '500',
       style: 'normal',
