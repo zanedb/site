@@ -274,3 +274,13 @@ h2 {
   background-position: bottom right;
   background-size: 100% 2px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .hoverEffect {
+    background-image: linear-gradient(#fff 0 0);
+    background-position: bottom left;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s;
+  }
+}
