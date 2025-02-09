@@ -29,13 +29,14 @@ export default async function Home() {
         />
       </section>
       <section className="mt-6 pt-4 border-t-2">
-          I’m a {me.age}-year-old web designer and musician, studying multimedia
-          arts at San Francisco State University.
         <p className={`break-words ${domaineText.className} text-lg`}>
+          I’m a {me.age}-year-old designer and developer, currently studying
+          multimedia arts in BECA at San Francisco State University. I‘m
+          currently looking for new projects.
         </p>
       </section>
       <section className="mt-6">
-        <h3 className="text-lg font-bold">Past Work</h3>
+        <h3 className="text-lg font-bold">My Work</h3>
         <Projects />
       </section>
     </>
