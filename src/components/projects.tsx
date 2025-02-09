@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getProjects } from '@/app/portfolio/utils'
-import { noeText } from '@/lib/fonts'
+import { domaineText } from '@/lib/fonts'
 
 export default function Projects() {
   const projects = getProjects()
@@ -29,7 +29,7 @@ export default function Projects() {
               <div>
                 <h3 className="font-medium pb-1">{project.metadata.title}</h3>
                 <p
-                  className={`text-gray-700 dark:text-gray-50 ${noeText.className}`}
+                  className={`text-gray-700 dark:text-gray-50 ${domaineText.className}`}
                 >
                   {project.metadata.summary}
                 </p>
@@ -38,7 +38,7 @@ export default function Projects() {
                 <Image
                   src={project.metadata.previewImage}
                   alt={project.metadata.title}
-                  className="h-fit w-fit max-w-16 max-h-16"
+                  className="h-fit w-fit max-w-16 max-h-16 pl-2"
                   width={128}
                   height={128}
                 />

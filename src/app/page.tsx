@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Typist from '@/components/typist'
 import Projects from '@/components/projects'
-import { noeText } from '@/lib/fonts'
+import { domaineText } from '@/lib/fonts'
 
 export default async function Home() {
   const res = await fetch('https://api.zanedb.com/api/me')
@@ -29,9 +29,9 @@ export default async function Home() {
         />
       </section>
       <section className="mt-6 pt-4 border-t-2">
-        <p className={`break-words ${noeText.className} text-lg`}>
           I’m a {me.age}-year-old web designer and musician, studying multimedia
           arts at San Francisco State University.
+        <p className={`break-words ${domaineText.className} text-lg`}>
         </p>
       </section>
       <section className="mt-6">
