@@ -33,7 +33,7 @@ export default async function Home() {
         <p className={`break-words ${domaineText.className} text-lg`}>
           I’m a {me.age}-year-old designer and developer, currently studying
           multimedia arts in BECA at San Francisco State University. I‘m
-          currently looking for new projects.
+          always looking for new projects.
         </p>
       </section>
       <section className="mt-6">
