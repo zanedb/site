@@ -9,13 +9,14 @@ export default async function Home() {
 
   return (
     <>
-      <section className="flex justify-between items-center">
+      <div className="bg-accent dark:bg-accentDark absolute -z-10 h-32 md:h-40 rounded-full min-w-full -translate-x-1/2 md:-translate-x-3/4"></div>
+      <section className="flex justify-between items-center bg-accent dark:bg-accentDark rounded-full">
         <div className="text-2xl md:text-3xl">
           <h1>Hey, I’m</h1>
           <h1 className="font-medium">
             <Typist speed={180} />
           </h1>
-          <p className="mt-4 max-w-min rounded-full px-2 py-1 text-xs bg-[#d6edff] dark:bg-[#83d1ff] text-[#0847c5]">
+          <p className="mt-4 max-w-min rounded-full px-2 py-1 text-xs bg-motif dark:bg-motifDark dark:text-motifText">
             he/him
           </p>
         </div>
@@ -23,12 +24,12 @@ export default async function Home() {
           src="https://github.com/zanedb.png"
           width={124}
           height={124}
-          className="rounded-full border-4 md:w-40 md:h-40 ease-in-out duration-300 hover:-translate-y-1 hover:shadow-sm hover:-skew-x-2 active:skew-x-2"
+          className="rounded-full border-4 border-transparent h-32 w-32 md:w-40 md:h-40"
           priority={true}
           alt="Me asf"
         />
       </section>
-      <section className="mt-6 pt-4 border-t-2">
+      <section className="mt-6">
         <p className={`break-words ${domaineText.className} text-lg`}>
           I’m a {me.age}-year-old designer and developer, currently studying
           multimedia arts in BECA at San Francisco State University. I‘m

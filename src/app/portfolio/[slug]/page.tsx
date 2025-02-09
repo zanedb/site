@@ -56,22 +56,20 @@ export default async function Project({ params }) {
         '--accent-color': project.metadata.color,
       }}
     >
-      <div className="mt-6 flex flex-col md:flex-row justify-between md:items-center">
+      <div className="mt-8 flex flex-row justify-between items-baseline">
         <h1 className="text-2xl md:text-3xl font-bold">
           {project.metadata.title}
         </h1>
         {project.metadata.link ? (
           <Link
-            className={`rounded-full bg-[var(--accent-color)] ${
-              project.slug === 'jonatan' && 'text-neutral-800'
-            } w-fit mt-4 md:mt-0 px-4 py-2 text-sm text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
+            className={`rounded-full bg-[var(--accent-color)] dark:opacity-90 w-fit mt-4 md:mt-0 px-4 py-2 text-sm text-white text-center transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
             href={project.metadata.link}
           >
             Visit »
           </Link>
         ) : null}
       </div>
-      <div className="mb-8 mt-2 flex items-center justify-between text-sm"></div>
+      <div className="flex items-center justify-between text-sm"></div>
       <article className={`prose ${domaineText.className}`}>
         <CustomMDX source={project.content} />
       </article>
